@@ -1,0 +1,20 @@
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#titre {
+    margin-top: 100px;
+    color: whitesmoke;
+}
+
+#titre > h1 {
+    font-size: 40px;
+    margin-bottom: 0;
+}
+
+#titre > h2 {
+    font-family: "Roboto Light", sans-serif;
+    margin-top: 0;
+}
