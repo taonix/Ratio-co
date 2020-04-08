@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Roboto Medium";
+    src: url("../fonts/Roboto-Medium.ttf");
+}
+
 .Site {
     display: flex;
     min-height: 100vh;
@@ -14,6 +19,10 @@
 
 #burger_icon {
     height: 80%;
+}
+
+html {
+    font-family: Roboto Medium, sans-serif;
 }
 
 body {
@@ -55,6 +64,20 @@ div {
     position: relative;
 }
 
+footer {
+    height: 30px;
+    background-color: black;
+    width: 100%;
+    display: flex;
+    margin: auto;
+}
+
+footer a {
+    color: whitesmoke;
+    text-decoration: none;
+    margin: auto;
+}
+
 nav > div {
     display: flex;
     justify-content: center;
@@ -71,7 +94,7 @@ nav > div:hover {
 }
 
 nav a {
-    color: white;
+    color: whitesmoke;
     text-decoration: none;
 }
 
@@ -95,12 +118,44 @@ div.burger > img {
     z-index: 3;
 }
 
-@media(max-width: 600px) {
-    #burger_menu {
-        display: block;
+@media(max-width: 730px) {
+    header {
+        align-items: flex-start;
+        background: none;
     }
 
-    #menu {
+    header > nav {
         display: none;
     }
+
+    div.burger {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    div.burger:hover > #menu2 {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 50px;
+        left: 0;
+        z-index: 1;
+    }
+
+    #menu2 > div {
+        background-color: rgba(0, 0, 0, 0.5);
+        border: 0 solid black;
+        border-top-width: 2px;
+    }
+
+    #menu2 a{
+        color: whitesmoke;
+        text-decoration: none;
+    }
+
+    #menu2 {
+        display: none;
+    }
+
 }
